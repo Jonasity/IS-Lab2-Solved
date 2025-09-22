@@ -2,7 +2,7 @@ clear;
 clc;
 close all;
 
-%% 1. Initial define
+%% Initialization
 
 % Input vector
 x1 = 0.1:1/22:1;
@@ -119,7 +119,6 @@ fprintf('Training finished!\n\n');
 
 %% 3. Final result
 
-% Final output
 yo_final = zeros(1, num_samples);
 for k = 1:num_samples
     % Hidden Layer
@@ -137,7 +136,7 @@ for k = 1:num_samples
     yo_final(k) = net_o1;
 end
 
-% --- Display Final Coefficients ---
+% Display Final Coefficients
 disp('--- Final Trained Coefficients ---');
 
 weightsHidden = [wh11, wh12, wh13, wh14];
@@ -156,7 +155,7 @@ biasOutput = bo1;
 disp('Output Layer Bias:');
 disp(biasOutput);
 
-% --- Plot the comparison graph ---
+% Plot the comparison graph
 figure;
 plot(x1, d, 'b-o', 'LineWidth', 2, 'MarkerFaceColor', 'b');
 hold on;
